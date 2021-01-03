@@ -1,0 +1,26 @@
+get:
+  tags:
+    - Post
+  summary: get posts contain hashtag
+  parameters:
+    - name: hashtag
+      in: path
+      required: true
+      description: hashtag
+      schema:
+        type: string
+        minimum: 1
+  responses:
+    '200':
+      description: Expected response to a valid request
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              code:
+                type: integer
+              payload:
+                type: array
+                items:
+                  $ref: "../openapi.yaml#/components/schemas/Post"

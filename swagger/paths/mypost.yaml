@@ -1,0 +1,19 @@
+get:
+  tags:
+    - Post
+  summary: get mypost
+  responses:
+    '200':
+      description: Expected response to a valid request
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              code:
+                type: integer
+                default: 200
+              payload:
+                type: array
+                items:
+                  $ref: "../openapi.yaml#/components/schemas/Post"

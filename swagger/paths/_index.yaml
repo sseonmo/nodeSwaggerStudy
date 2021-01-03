@@ -1,0 +1,6 @@
+/mypost:
+  $ref: "./mypost.yaml"
+/search/{hashtag}:
+  $ref: "./searchhashtag.yaml"
+/myFollowers:
+  $ref: "./myfollowers.yaml"
